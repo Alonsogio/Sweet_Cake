@@ -1,0 +1,22 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 33px;
+    background-color: #ea6868;
+    gap: 15px;
+}
+
+.search-icon {
+    margin-right: 16px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.logo img {
+    width: 79px;
+    height: 79px;
+    margin-left: 126px;
+    object-fit: cover;
+}
