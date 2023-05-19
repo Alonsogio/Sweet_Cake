@@ -11,7 +11,7 @@ export const data = [
   },
   {
     id: 2,
-    img: "assets/img/bolo.png",
+    img: "assets/img/cake2.png",
     nameItem: "Bolo de Limão",
     description:
       "Bolo de limão cremoso com nozes tostadas e uma leve cobertura de...",

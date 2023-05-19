@@ -24,12 +24,15 @@ export class CardsComponent {
         initialState,
       });
       this.modalRef.content.closeModal.subscribe(() => {
-        this.modalRef?.hide(); // Fecha o modal quando o evento closeModal é emitido
+        this.modalRef?.hide();
+        document.body.classList.remove('modal-open');
       });
+      document.body.classList.add('modal-open');
     }
   }
 
   closeModal() {
     this.modalRef?.hide();
+    document.body.classList.remove('modal-open');
   }
 }

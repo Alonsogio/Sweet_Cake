@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar>
   <button>
     <span>Home</span>
   </button>
@@ -12,7 +12,37 @@
     <img src="assets/img/logo.png" alt="logo" />
   </div>
   <span class="spacer"></span>
-  <!-- espaçador -->
-  <i class="fas fa-magnifying-glass"></i>
-  <i class="fas fa-cart-shopping"></i>
+  <div class="cart-icon" [matMenuTriggerFor]="cartMenu">
+    <div class="cart-count" *ngIf="cartItems.length > 0">
+      {{ cartItems.length }}
+    </div>
+    <i
+      class="fas fa-cart-shopping"
+      matTooltip="Carrinho"
+      (click)="showProductTooltip()"
+    ></i>
+  </div>
+  <div>
+    <i class="fas fa-magnifying-glass"></i>
+  </div>
 </mat-toolbar>
+
+<mat-menu #cartMenu="matMenu">
+  <ng-container *ngIf="cartItems.length === 0; else cartItemsSection">
+    <h3 class="empty-cart-message">Carrinho vazio</h3>
+  </ng-container>
+  <ng-template #cartItemsSection>
+    <div class="cart-items">
+      <button mat-menu-item *ngFor="let product of cartItems">
+        <img [src]="product.img" alt="Product Image" class="menu-item-image" />
+        <div class="menu-item-details">
+          <p>{{ product.name }}</p>
+          <p>{{ product.price }}</p>
+        </div>
+        <button mat-icon-button (click)="removeFromCart(product)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </button>
+    </div>
+  </ng-template>
+</mat-menu>
