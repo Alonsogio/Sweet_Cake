@@ -12,13 +12,21 @@
         </button>
       </div>
       <div class="modal-body">
-        <h4 class="modal-title">{{ product?.nameItem }}</h4>
         <img [src]="product?.img" alt="Product Image" />
-        <p>{{ product?.description }}</p>
+        <h4 class="modal-title">{{ product?.nameItem }}</h4>
+        <p class="modal-description" *ngIf="!showFullDescription">
+          {{ product?.description | slice : 0 : 100 }}
+        </p>
+        <p class="modal-description" *ngIf="showFullDescription">{{ product?.description }}</p>
+        <button class="modal-lermaisBtn" (click)="showFullDescription = !showFullDescription">
+          {{ showFullDescription ? "Ler menos..." : "Ler mais..." }}
+        </button>
         <p>Value: {{ product?.value }}</p>
         <p>Tag: {{ product?.tag }}</p>
         <!-- <div class="div-button"></div> -->
-        <button class="modal-button" (click)="addToCart(product)">Adicionar ao carrinho</button>
+        <button class="modal-button" (click)="addToCart(product)">
+          Adicionar ao carrinho
+        </button>
       </div>
     </div>
   </div>

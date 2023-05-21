@@ -9,6 +9,7 @@ import { CartService } from '../cart/cart.service';
 export class ProductModalComponent {
   @Input() product: any;
   @Output() closeModal: EventEmitter<void> = new EventEmitter<void>();
+  showFullDescription = false;
 
   constructor(private cartService: CartService) {}
 

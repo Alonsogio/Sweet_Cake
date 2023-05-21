@@ -1,17 +1,16 @@
 .mat-toolbar {
     display: flex;
     justify-content: space-between;
-    padding: 0px 33px;
+    padding: 0px 40px;
     background-color: var(--primary);
-    gap: 15px;
 }
 
 .search-icon {
-    margin-right: 16px;
+    color: #dad0d0;
 }
-
 .cart-icon {
     cursor: pointer;
+    color: #dad0d0;
 }
 
 .spacer {
@@ -51,4 +50,30 @@
     font-size: 14px;
     text-align: center;
     margin: 10px 0;
+}
+
+.div-headerbutton {
+    border-left: 1px solid #b7b1b1;
+    width: 100px;
+    height: 56%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-buttonsNav {
+    display: flex;
+    width: 30%;
+    gap: 20px;
+}
+
+.header-buttonsNav button {
+    color: #dad0d0;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+}
+
+button span {
+    font-family: 'Montserrat', sans-serif;
 }

@@ -25,9 +25,9 @@
     left: 28%;
     transform: translate(-50%, -50%);
     font-family: 'Great Vibes', cursive;
-    font-size: 53px;
+    font-size: 57px;
     z-index: 2;
-    color: #ea6868;
+    color: var(--pink-secundary);
 }
 
 .image-text2 {

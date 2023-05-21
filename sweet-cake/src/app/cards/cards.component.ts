@@ -9,7 +9,7 @@ import { ProductModalComponent } from '../product-modal/product-modal.component'
   styleUrls: ['./cards.component.css'],
 })
 export class CardsComponent {
-  items = data;
+  items: any[] = data.map((item) => ({ ...item, quantity: 0 }));
   modalRef: BsModalRef<any> | undefined;
 
   constructor(private modalService: BsModalService) {}
@@ -34,5 +34,17 @@ export class CardsComponent {
   closeModal() {
     this.modalRef?.hide();
     document.body.classList.remove('modal-open');
+  }
+
+  increment(event: Event, item: any) {
+    event.stopPropagation();
+    item.quantity++;
+  }
+
+  decrement(event: Event, item: any) {
+    event.stopPropagation();
+    if (item.quantity > 0) {
+      item.quantity--;
+    }
   }
 }

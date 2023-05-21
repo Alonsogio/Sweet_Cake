@@ -1,29 +1,33 @@
 <mat-toolbar>
-  <button>
-    <span>Home</span>
-  </button>
-  <button>
-    <span>Contact</span>
-  </button>
-  <button>
-    <span>About Us</span>
-  </button>
+  <div class="header-buttonsNav">
+    <button>
+      <span>Home</span>
+    </button>
+    <button>
+      <span>Contact</span>
+    </button>
+    <button>
+      <span>About Us</span>
+    </button>
+  </div>
   <div class="logo">
     <img src="assets/img/logo.png" alt="logo" />
   </div>
   <span class="spacer"></span>
-  <div class="cart-icon" [matMenuTriggerFor]="cartMenu">
-    <div class="cart-count" *ngIf="cartItems.length > 0">
-      {{ cartItems.length }}
+  <div class="div-headerbutton">
+    <div class="cart-icon" [matMenuTriggerFor]="cartMenu">
+      <div class="cart-count" *ngIf="cartItems.length > 0">
+        {{ cartItems.length }}
+      </div>
+      <i
+        class="fas fa-cart-shopping"
+        matTooltip="Carrinho"
+        (click)="showProductTooltip()"
+      ></i>
     </div>
-    <i
-      class="fas fa-cart-shopping"
-      matTooltip="Carrinho"
-      (click)="showProductTooltip()"
-    ></i>
-  </div>
-  <div>
-    <i class="fas fa-magnifying-glass"></i>
+    <div class="search-icon">
+      <i class="fas fa-magnifying-glass"></i>
+    </div>
   </div>
 </mat-toolbar>
 

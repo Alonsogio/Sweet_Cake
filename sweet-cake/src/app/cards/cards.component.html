@@ -1,13 +1,23 @@
-<div class="container" *ngFor="let item of items">
-  <div class="card-image">
-    <img [src]="item.img" alt="{{ item.nameItem }}" />
-  </div>
-  <div class="card" (click)="openModal(item.id)">
-    <div class="card-content">
-      <h2 class="card-title">{{ item.nameItem }}</h2>
-      <p class="card-description">{{ item.description }}</p>
-      <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
-      <button class="card-button">Comprar</button>
+<div class="listCards">
+  <div class="container" *ngFor="let item of items">
+    <div class="card-image" (click)="openModal(item.id)">
+      <img [src]="item.img" alt="{{ item.nameItem }}" />
+    </div>
+    <div class="card" (click)="openModal(item.id)">
+      <div class="card-content">
+        <h2 class="card-title">{{ item.nameItem }}</h2>
+        <p class="card-description">{{ item.description }}</p>
+        <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
+        <div class="counter">
+          <button (click)="decrement($event, item); $event.stopPropagation()">
+            -
+          </button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increment($event, item); $event.stopPropagation()">
+            +
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>

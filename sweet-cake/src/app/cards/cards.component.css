@@ -1,9 +1,9 @@
 .card {
     background-color: #f6f6f6;
     display: flex;
-    width: 596px;
-    height: 194px;
-    border-radius: 10px;
+    width: 567px;
+    height: 189px;
+    border-radius: 94px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     position: relative;
@@ -11,12 +11,19 @@
     z-index: 1;
     justify-content: flex-end;
     flex-direction: row;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px rgb(234 104 104 / 67%);
+    transition: box-shadow 0.3s, transform 0.3s;
+    transform: rotate(4deg);
 }
 
 .card-image {
     position: relative;
-    width: 261px;
-    height: 251px;
+    width: 233px;
+    height: 227px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -34,16 +41,16 @@
     transition: transform 0.2s ease-in-out;
 }
 
+.card-image:hover img {
+    transform: scale(1.2);
+}
+
 .card-content {
     padding: 20px;
     display: flex;
     width: 53%;
     flex-direction: column;
-    justify-content: space-evenly;
-}
-
-.card-image:hover img {
-    transform: scale(1.2);
+    justify-content: space-between;
 }
 
 .container {
@@ -52,4 +59,50 @@
 
 h2 {
     margin: 0;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.card-price {
+    margin: 0px;
+    color: #a4aaaf;
+}
+
+.card-description {
+    margin: 0px;
+    font-size: 15px;
+    color: #a5a8ac;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.counter {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter button {
+    display: flex;
+    width: 35px;
+    padding: 2px;
+    border-radius: 7px;
+    font-size: 28px;
+    border: none;
+    background-color: var(--primary);
+    color: #f6f6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
