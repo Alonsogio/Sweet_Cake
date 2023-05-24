@@ -3,6 +3,9 @@ export const data = [
   {
     id: 1,
     img: 'assets/img/bolofv.png',
+    img2: 'assets/img/fv1.jpg',
+    img3: 'assets/img/fv2.jpg',
+    img4: 'assets/img/fv3.jpg',
     nameItem: 'Bolo Frutas Vermelhas',
     description:
       'A aparência desse bolo é geralmente irresistível. A superfície do bolo é coberta com uma camada generosa de creme de chantilly ou um glacê suave, que serve como base para a decoração com as frutas vermelhas. As frutas são distribuídas de forma a criar uma combinação harmoniosa de cores vibrantes e texturas.\n\n' +

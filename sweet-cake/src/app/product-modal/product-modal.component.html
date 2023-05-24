@@ -1,32 +1,41 @@
 <div class="modal-background">
   <div class="modal show blow">
     <div class="modal-content">
-      <div class="modal-header">
-        <button
-          type="button"
-          class="close"
-          aria-label="Close"
-          (click)="onCloseModal()"
-        >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
       <div class="modal-body">
-        <img [src]="product?.img" alt="Product Image" />
-        <h4 class="modal-title">{{ product?.nameItem }}</h4>
-        <p class="modal-description" *ngIf="!showFullDescription">
-          {{ product?.description | slice : 0 : 100 }}
-        </p>
-        <p class="modal-description" *ngIf="showFullDescription">{{ product?.description }}</p>
-        <button class="modal-lermaisBtn" (click)="showFullDescription = !showFullDescription">
-          {{ showFullDescription ? "Ler menos..." : "Ler mais..." }}
-        </button>
-        <p>Value: {{ product?.value }}</p>
-        <p>Tag: {{ product?.tag }}</p>
-        <!-- <div class="div-button"></div> -->
-        <button class="modal-button" (click)="addToCart(product)">
-          Adicionar ao carrinho
-        </button>
+        <ngx-slick-carousel class="carousel" [config]="carouselOptions">
+          <div ngxSlickItem *ngFor="let image of getProductImages()">
+            <img class="img-carouselitem" [src]="image" alt="Product Image" />
+          </div>
+        </ngx-slick-carousel>
+        <div class="modal-info">
+          <h4 class="modal-title">{{ product?.nameItem }}</h4>
+          <p class="modal-description" *ngIf="!showFullDescription">
+            {{ product?.description | slice : 0 : 100 }}
+          </p>
+          <p class="modal-description" *ngIf="showFullDescription">
+            {{ product?.description }}
+          </p>
+          <button
+            class="modal-lermaisBtn"
+            (click)="showFullDescription = !showFullDescription"
+          >
+            {{ showFullDescription ? "Ler menos..." : "Ler mais..." }}
+          </button>
+          <p class="price-modal">R$ {{ product?.value }}</p>
+          <div class="modal-footer">
+            <button class="modal-button" (click)="addToCart(product)">
+              Adicionar ao carrinho
+            </button>
+            <button
+              type="button"
+              class="close"
+              aria-label="Close"
+              (click)="onCloseModal()"
+            >
+              <span aria-hidden="true">Fechar</span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

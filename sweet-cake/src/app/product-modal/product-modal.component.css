@@ -16,17 +16,17 @@
     display: flex;
     position: relative;
     width: 22%;
-    max-width: 216px;
+    max-width: 176px;
     background-color: #fffbfb;
-    padding: 19px;
+    padding: 6px 24px 4px;
     border-radius: 5px;
-    margin-top: 56vh;
+    margin-top: 26vh;
+    justify-content: center;
 }
 
 .modal-description {
-    width: 90%;
-    font-size: 10px;
-    color: #a5a8ac;
+    font-size: 9px;
+    color: var(--gray0);
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
@@ -48,7 +48,92 @@ img {
 
 h4 {
     color: var(--primary);
-    margin: 9px 0px;
+    margin: 4px 0px;
+    font-size: 13px;
+}
+
+.modal-lermaisBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 9px;
+    padding: 0px;
+    cursor: pointer;
+    color: var(--gray0);
+    transition: color 0.3s ease;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+.modal-lermaisBtn:hover {
+    color: var(--primary);
+}
+
+.price-modal {
+    font-size: 10px;
+    color: var(--primary);
+}
+
+.img-carouselitem {
+    height: 177px;
+    width: 213px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel {
+    width: 213px;
+}
+
+.slick-arrow {
+    left: -41px;
+}
+
+.modal-info {
+    padding: 9px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.modal-button {
+    background-color: var(--primary);
+    border: none;
+    color: #fffbfb;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: transparent;
+    border: 1px solid var(--gray0);
+    color: var(--primary);
+}
+
+.close {
+    border: 1px solid var(--gray0);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--pink-secundary);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    background-color: var(--pink-secundary);
+    border: 1px solid var(--pink-secundary);
+    color: white;
 }
 
 @keyframes blowUpModal {
