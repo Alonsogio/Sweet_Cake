@@ -10,7 +10,11 @@ export class HeaderComponent {
   cartItems: any[] = [];
   showTooltip: boolean = false;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) {
+    this.cartService.cartItems$.subscribe((cartItems) => {
+      this.cartItems = cartItems;
+    });
+  }
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();

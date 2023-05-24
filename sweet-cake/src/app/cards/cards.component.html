@@ -1,23 +1,57 @@
-<div class="listCards">
-  <div class="container" *ngFor="let item of items">
-    <div class="card-image" (click)="openModal(item.id)">
-      <img [src]="item.img" alt="{{ item.nameItem }}" />
+<div class="body-cards">
+  <div class="container-btn-filter">
+    <div>
+      <h1>What are you looking for?</h1>
     </div>
-    <div class="card" (click)="openModal(item.id)">
-      <div class="card-content">
-        <h2 class="card-title">{{ item.nameItem }}</h2>
-        <p class="card-description">{{ item.description }}</p>
-        <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
-        <div class="counter">
-          <button (click)="decrement($event, item); $event.stopPropagation()">
-            -
-          </button>
-          <span>{{ item.quantity }}</span>
-          <button (click)="increment($event, item); $event.stopPropagation()">
-            +
-          </button>
+    <div class="div-btn-filter">
+      <button class="btn-filter" (click)="filterCards('all')">Todos</button>
+      <button class="btn-filter" (click)="filterCards('Cupcakes')">
+        Cupcakes
+      </button>
+      <button class="btn-filter" (click)="filterCards('Macarons')">
+        Macarons
+      </button>
+      <button class="btn-filter" (click)="filterCards('Cakes')">Cakes</button>
+    </div>
+  </div>
+  <div class="listCards">
+    <div
+      class="container"
+      *ngFor="let item of filteredItems"
+      [ngClass]="{
+        'fade-in-animation': selectedTag !== 'all',
+        show: selectedTag === 'all' || selectedTag === item.tag
+      }"
+    >
+      <div class="card-image" (click)="openModal(item.id)">
+        <img [src]="item.img" alt="{{ item.nameItem }}" />
+      </div>
+      <div class="card" (click)="openModal(item.id)">
+        <div class="card-content">
+          <h2 class="card-title">{{ item.nameItem }}</h2>
+          <p class="card-description">{{ item.description }}</p>
+          <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
+          <div class="counter">
+            <button (click)="decrement($event, item); $event.stopPropagation()">
+              -
+            </button>
+            <span>{{ item.quantity }}</span>
+            <button (click)="increment($event, item); $event.stopPropagation()">
+              +
+            </button>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+  <div>
+    <button class="btn-add" (click)="addAllToCart()">
+      <div class="span-text">
+        Selected {{ selectedItems }} item{{ selectedItems === 1 ? "" : "s" }}
+      </div>
+      <div class="arrow-icon">
+        <i class="fas fa-arrow-right"></i>
+      </div>
+    </button>
   </div>
 </div>
