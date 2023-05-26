@@ -20,7 +20,7 @@
     background-color: #fffbfb;
     padding: 6px 24px 4px;
     border-radius: 5px;
-    margin-top: 26vh;
+    margin-top: 4vh;
     justify-content: center;
 }
 
@@ -74,7 +74,7 @@ h4 {
 }
 
 .img-carouselitem {
-    height: 177px;
+    height: 126px;
     width: 213px;
     object-fit: cover;
     border-radius: 5px;

@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { CartService } from '../cart/cart.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-product-modal',
@@ -17,7 +18,15 @@ export class ProductModalComponent {
     arrows: true,
   };
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private toastr: ToastrService) {}
+
+  showSuccess(mensage: string, title: string) {
+    this.toastr.success(`${mensage}`, `${title}`, {
+      positionClass: 'toast-bottom-left',
+      closeButton: true,
+      timeOut: 3000,
+    });
+  }
 
   onCloseModal() {
     this.closeModal.emit();
@@ -25,6 +34,7 @@ export class ProductModalComponent {
 
   addToCart(product: any) {
     this.cartService.addToCart(product);
+    this.showSuccess('Item adicionados ao carrinho com sucesso!', 'Sucess!');
   }
 
   getProductImages(): string[] {

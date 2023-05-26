@@ -91,3 +91,14 @@
 button span {
     font-family: 'Montserrat', sans-serif;
 }
+
+.menu-item-image {
+    width: 144px;
+    height: 135px;
+    object-fit: cover;
+}
+
+.cart-li {
+    display: flex;
+    flex-direction: row;
+}

@@ -8,6 +8,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ToastrModule } from 'ngx-toastr';
 import 'slick-carousel/slick/slick';
 
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
     FontAwesomeModule,
     SlickCarouselModule,
     ModalModule.forRoot(),
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

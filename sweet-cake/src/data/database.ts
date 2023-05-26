@@ -17,6 +17,9 @@ export const data = [
   {
     id: 2,
     img: 'assets/img/tortadelimao.png',
+    img2: 'assets/img/Lm1.jpg',
+    img3: 'assets/img/Lm2.jpg',
+    img4: 'assets/img/Lm3.jpg',
     nameItem: 'Bolo de Limão',
     description:
       'O recheio é preparado com suco de limão fresco, raspas de limão e açúcar, resultando em um creme suave e azedinho. Esse recheio é espalhado entre as camadas do bolo, proporcionando um contraste de sabores entre o doce da massa e o azedinho do limão.  Para complementar, o bolo de limão é coberto com uma cobertura de limão, que pode ser feita com uma mistura de suco de limão e açúcar de confeiteiro. Essa cobertura adiciona um toque final de acidez e uma camada de sabor irresistível ao bolo. Além disso, o bolo de limão pode ser decorado com raspas de limão ou fatias finas da fruta, adicionando um toque visualmente atrativo e realçando ainda mais o aroma e o sabor do limão. O resultado final é um bolo de limão com uma combinação perfeita de doce e azedo, ideal para os amantes de sobremesas refrescantes e cítricas. É uma opção perfeita para qualquer ocasião, desde festas de aniversário até um simples lanche da tarde.',
@@ -26,6 +29,9 @@ export const data = [
   {
     id: 3,
     img: 'assets/img/cake2.png',
+    img2: 'assets/img/rv1.jpg',
+    img3: 'assets/img/rv2.jpg',
+    img4: 'assets/img/rv3.png',
     nameItem: 'Bolo Red Velvet',
     description:
       'A massa do bolo é feita com ingredientes como farinha de trigo, açúcar, manteiga, cacau em pó e um toque de corante vermelho, que dá ao bolo sua cor vibrante. Além disso, a massa leva um pouco de vinagre branco, que ajuda a realçar o sabor e a textura do bolo. O Red Velvet é geralmente acompanhado de um creme de queijo como cobertura, que adiciona um toque de cremosidade e suavidade ao bolo. O creme de queijo é feito com queijo cremoso, manteiga, açúcar de confeiteiro e baunilha, resultando em uma combinação perfeita de sabores com o bolo. A decoração do bolo Red Velvet pode variar, mas é comum encontrá-lo decorado com migalhas de bolo, raspas de chocolate branco ou até mesmo com uma camada adicional de creme de queijo por cima.',
@@ -35,6 +41,9 @@ export const data = [
   {
     id: 4,
     img: 'assets/img/blueberrycupcakes.png',
+    img2: 'assets/img/bb1.jpg',
+    img3: 'assets/img/bb2.jpg',
+    img4: 'assets/img/bb3.jpg',
     nameItem: 'Cupcakes BlueBerry',
     description:
       'A massa do cupcake é feita com ingredientes tradicionais, como farinha de trigo, açúcar, manteiga e ovos, mas o destaque fica por conta das blueberries frescas ou congeladas, que são incorporadas à massa, adicionando um sabor único e pontinhos coloridos ao cupcake. Ao assar, o cupcake desenvolve uma textura leve e úmida, enquanto as blueberries liberam seus sucos, criando pequenas explosões de sabor em cada mordida. O contraste entre a maciez do cupcake e o toque frutado das blueberries torna esse cupcake uma opção deliciosa para os amantes de sobremesas. Para finalizar, pode-se adicionar uma cobertura de cream cheese ou buttercream com sabor de blueberry, realçando ainda mais o sabor da fruta e proporcionando uma experiência completa de sabores.',
@@ -44,6 +53,9 @@ export const data = [
   {
     id: 5,
     img: 'assets/img/strawberrie.png',
+    img2: 'assets/img/mg1.jpg',
+    img3: 'assets/img/mg2.jpg',
+    img4: 'assets/img/mg3.jpg',
     nameItem: 'Cupcakes Morango',
     description: 'Cupcakes de morango extremamente úmidos são cobert...',
     value: 55.0,
@@ -52,6 +64,9 @@ export const data = [
   {
     id: 6,
     img: 'assets/img/banana.png',
+    img2: 'assets/img/bn1.jpg',
+    img3: 'assets/img/bn2.jpg',
+    img4: 'assets/img/bn3.jpg',
     nameItem: 'Cupcakes Banana',
     description:
       'Estes deliciosos cupcakes de pudim de banana caseiro rechea...',
@@ -61,6 +76,9 @@ export const data = [
   {
     id: 7,
     img: 'assets/img/mango.png',
+    img2: 'assets/img/m1.jpg',
+    img3: 'assets/img/m2.png',
+    img4: 'assets/img/m3.png',
     nameItem: 'Macarons de Manga',
     description: 'Macarons com ganache cremosa de manga e...',
     value: 35.9,

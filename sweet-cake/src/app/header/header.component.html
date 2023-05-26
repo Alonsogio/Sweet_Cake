@@ -38,14 +38,16 @@
   <ng-template #cartItemsSection>
     <div class="cart-items">
       <button mat-menu-item *ngFor="let product of cartItems">
+        <li class="cart-li">
         <img [src]="product.img" alt="Product Image" class="menu-item-image" />
         <div class="menu-item-details">
-          <p>{{ product.name }}</p>
-          <p>{{ product.price }}</p>
+          <p>{{ product?.nameItem }}</p>
+          <p>{{ product?.value }}</p>
         </div>
         <button mat-icon-button (click)="removeFromCart(product)">
-          <mat-icon>close</mat-icon>
+          <i class="fa-sharp fa-solid fa-trash"></i>
         </button>
+      </li>
       </button>
     </div>
   </ng-template>

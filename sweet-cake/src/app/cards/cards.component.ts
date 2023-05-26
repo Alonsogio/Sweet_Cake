@@ -4,6 +4,7 @@ import { data } from '../../data/database';
 import { ProductModalComponent } from '../product-modal/product-modal.component';
 import { trigger, style, transition, animate } from '@angular/animations';
 import { CartService } from '../cart/cart.service';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-cards',
@@ -39,8 +40,17 @@ export class CardsComponent {
 
   constructor(
     private modalService: BsModalService,
-    private cartService: CartService
+    private cartService: CartService,
+    private toastr: ToastrService
   ) {}
+
+  showSuccess(mensage: string, title: string) {
+    this.toastr.success(`${mensage}`, `${title}`, {
+      positionClass: 'toast-bottom-left',
+      closeButton: true,
+      timeOut: 3000,
+    });
+  }
 
   openModal(productId: number) {
     const product = this.items.find((item) => item.id === productId);
@@ -58,6 +68,7 @@ export class CardsComponent {
       document.body.classList.add('modal-open');
     }
   }
+
   addAllToCart() {
     for (const item of this.filteredItems) {
       if (item.quantity > 0) {
@@ -66,7 +77,9 @@ export class CardsComponent {
       }
     }
     this.selectedItems = 0;
+    this.showSuccess('Itens adicionados ao carrinho com sucesso!', 'Sucess!');
   }
+
   closeModal() {
     this.modalRef?.hide();
     document.body.classList.remove('modal-open');

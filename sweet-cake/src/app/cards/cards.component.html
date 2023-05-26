@@ -45,7 +45,12 @@
     </div>
   </div>
   <div>
-    <button class="btn-add" (click)="addAllToCart()">
+    <button
+      class="btn-add"
+      (click)="addAllToCart()"
+      [disabled]="selectedItems === 0"
+      [ngClass]="{ 'disabled-button': selectedItems === 0 }"
+    >
       <div class="span-text">
         Selected {{ selectedItems }} item{{ selectedItems === 1 ? "" : "s" }}
       </div>
@@ -54,4 +59,5 @@
       </div>
     </button>
   </div>
+  <div class="toast-custom"></div>
 </div>
