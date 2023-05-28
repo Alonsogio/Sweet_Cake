@@ -105,10 +105,6 @@ h2 {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background-image: url('src\assets\img\bgcard.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .container-btn-filter {
@@ -123,7 +119,7 @@ h2 {
 h1 {
     font-family: 'Great Vibes';
     font-size: 49px;
-    color: var(--primary);
+    color: #2e1406;
 }
 
 .div-btn-filter {
@@ -179,6 +175,7 @@ h1 {
     color: white;
     justify-content: space-around;
     align-items: center;
+    transition: background-color 0.3s ease;
 }
 
 .body-cards {
@@ -196,4 +193,30 @@ h1 {
 .disabled-button {
     background-color: #8080806e;
     color: white;
+    transition: background-color 0.3s ease;
+}
+
+.star-filled {
+    color: var(--pink-secundary);
+}
+
+.star-icon {
+    color: rgba(217, 214, 214, 0.953);
+    font-size: 14px;
+}
+
+.like {
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    padding: 3px 0px;
+    cursor: pointer;
+}
+
+button.liked {
+    color: red;
+    width: 15%;
+    background-color: transparent;
+    border: none;
+    padding: 3px 0px;
 }

@@ -1,4 +1,4 @@
-<mat-toolbar>
+<mat-toolbar [ngClass]="{ fixed: isHeaderFixed }">
   <div class="header-buttonsNav">
     <button>
       <span>Home</span>
@@ -39,15 +39,19 @@
     <div class="cart-items">
       <button mat-menu-item *ngFor="let product of cartItems">
         <li class="cart-li">
-        <img [src]="product.img" alt="Product Image" class="menu-item-image" />
-        <div class="menu-item-details">
-          <p>{{ product?.nameItem }}</p>
-          <p>{{ product?.value }}</p>
-        </div>
-        <button mat-icon-button (click)="removeFromCart(product)">
-          <i class="fa-sharp fa-solid fa-trash"></i>
-        </button>
-      </li>
+          <img
+            [src]="product.img"
+            alt="Product Image"
+            class="menu-item-image"
+          />
+          <div class="menu-item-details">
+            <p>{{ product?.nameItem }}</p>
+            <p>{{ product?.value }}</p>
+          </div>
+          <button mat-icon-button (click)="removeFromCart(product)">
+            <i class="fa-sharp fa-solid fa-trash"></i>
+          </button>
+        </li>
       </button>
     </div>
   </ng-template>

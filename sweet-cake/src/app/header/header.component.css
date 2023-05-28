@@ -5,6 +5,13 @@
     background-color: var(--primary);
 }
 
+.mat-toolbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
 .search-icon {
     color: #dad0d0;
 }
@@ -15,8 +22,8 @@
 }
 
 .cart-count {
-    background-color: var(--pink-secundary);
-    color: white;
+    background-color: #a0ea97;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     border-radius: 26px;

@@ -20,7 +20,12 @@ import { ToastrService } from 'ngx-toastr';
   ],
 })
 export class CardsComponent {
-  items: any[] = data.map((item) => ({ ...item, quantity: 0 }));
+  items: any[] = data.map((item) => ({
+    ...item,
+    quantity: 0,
+    likes: 0,
+    liked: false,
+  }));
   modalRef: BsModalRef<any> | undefined;
   filteredItems: any[] = this.items;
   selectedTag: string = 'all';
@@ -85,7 +90,25 @@ export class CardsComponent {
     document.body.classList.remove('modal-open');
   }
 
+  getStars(count: number): any[] {
+    const stars = [];
+    for (let i = 0; i < 5; i++) {
+      stars.push(i < count);
+    }
+    return stars;
+  }
+
   selectedItems: number = 0;
+
+  incrementLikes(event: Event, item: any) {
+    event.stopPropagation();
+    if (item.liked) {
+      item.likes--;
+    } else {
+      item.likes++;
+    }
+    item.liked = !item.liked;
+  }
 
   increment(event: Event, item: any) {
     event.stopPropagation();

@@ -1,0 +1,40 @@
+<div class="popular-products">
+  <div class="popular-info">
+    <div>
+      <h1 class="popular-infotittle">The most popular with customers!</h1>
+    </div>
+    <div class="popular-infodescription">
+      <span
+        >On the site you can vote for the products you like the most and they
+        are displayed and recommended here!</span
+      >
+    </div>
+  </div>
+  <div class="arrow left" (click)="previousProduct()">
+    <i class="fas fa-chevron-left"></i>
+  </div>
+
+  <div
+    class="product"
+    *ngFor="let product of popularProducts; let i = index"
+    [ngClass]="{ active: i === activeIndex }"
+  >
+    <div class="product-divimg">
+      <img [src]="product.img2" alt="{{ product.nameItem }}" />
+    </div>
+    <div class="product-body">
+      <h3>{{ product.nameItem }}</h3>
+      <div class="stars">
+        <i
+          class="fas fa-star"
+          *ngFor="let star of getStars(product.likes)"
+          [ngClass]="{ filled: star }"
+        ></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="arrow right" (click)="nextProduct()">
+    <i class="fas fa-chevron-right"></i>
+  </div>
+</div>

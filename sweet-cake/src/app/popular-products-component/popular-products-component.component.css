@@ -1,0 +1,91 @@
+.popular-products {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  gap: 48px;
+  background-color: #dde4e4;
+  padding: 41px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--pink-secundary);
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.product {
+  text-align: center;
+  transition: transform 0.5s;
+  background-color: white;
+  border-radius: 6px;
+  padding: 14px 14px 5px;
+}
+
+.product.active {
+  display: block;
+  transform: scale(1.2);
+}
+
+.product img {
+  width: 231px;
+  height: 196px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.stars {
+  margin-bottom: 10px;
+  color: var(--gray0);
+  font-size: 11px;
+}
+
+.fas.fa-star.filled {
+  color: var(--pink-secundary)
+}
+
+.product-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h3 {
+  font-size: 14px;
+  color: var(--pink-secundary);
+}
+
+h1 {
+  color: var(--pink-secundary);
+  font-size: 30px;
+}
+
+.popular-infodescription {
+  color: var(--gray0);
+  font-size: 14px;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

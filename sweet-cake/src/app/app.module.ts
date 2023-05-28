@@ -16,6 +16,7 @@ import { CardsComponent } from './cards/cards.component';
 import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
+import { PopularProductsComponentComponent } from './popular-products-component/popular-products-component.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
     HeaderComponent,
     CarouselComponent,
     ProductModalComponent,
+    PopularProductsComponentComponent,
   ],
   imports: [
     BrowserModule,

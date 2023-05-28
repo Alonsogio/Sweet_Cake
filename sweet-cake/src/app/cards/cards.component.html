@@ -29,7 +29,18 @@
       <div class="card" (click)="openModal(item.id)">
         <div class="card-content">
           <h2 class="card-title">{{ item.nameItem }}</h2>
+          <div>
+            <span class="star-icon" *ngFor="let star of getStars(item.likes)">
+              <i class="fas fa-star" [ngClass]="{ 'star-filled': star }"></i>
+            </span>
+          </div>
           <p class="card-description">{{ item.description }}</p>
+          <button class="like"
+            (click)="incrementLikes($event, item); $event.stopPropagation()"
+            [ngClass]="{ liked: item.liked }"
+          >
+            <i class="far fa-heart"></i> {{ item.likes }}
+          </button>
           <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
           <div class="counter">
             <button (click)="decrement($event, item); $event.stopPropagation()">
