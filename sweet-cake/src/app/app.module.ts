@@ -17,6 +17,11 @@ import { HeaderComponent } from './header/header.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
 import { PopularProductsComponentComponent } from './popular-products-component/popular-products-component.component';
+import { SobreNosComponent } from './sobre-nos/sobre-nos.component';
+import { ProductDiscountComponent } from './product-discount/product-discount.component';
+
+import { CartService } from './cart/cart.service';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +31,9 @@ import { PopularProductsComponentComponent } from './popular-products-component/
     CarouselComponent,
     ProductModalComponent,
     PopularProductsComponentComponent,
+    SobreNosComponent,
+    ProductDiscountComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,7 +47,13 @@ import { PopularProductsComponentComponent } from './popular-products-component/
     ModalModule.forRoot(),
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [ProductDiscountComponent],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+  cartItems: any[] = [];
+
+  constructor(private cartService: CartService) {
+    this.cartItems = this.cartService.getCartItems();
+  }
+}

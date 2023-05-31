@@ -35,7 +35,8 @@
             </span>
           </div>
           <p class="card-description">{{ item.description }}</p>
-          <button class="like"
+          <button
+            class="like"
             (click)="incrementLikes($event, item); $event.stopPropagation()"
             [ngClass]="{ liked: item.liked }"
           >

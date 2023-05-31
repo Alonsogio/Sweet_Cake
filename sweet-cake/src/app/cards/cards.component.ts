@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { ProductDiscountComponent } from '../product-discount/product-discount.component';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { data } from '../../data/database';
 import { ProductModalComponent } from '../product-modal/product-modal.component';
 import { trigger, style, transition, animate } from '@angular/animations';
 import { CartService } from '../cart/cart.service';
 import { ToastrService } from 'ngx-toastr';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-cards',
@@ -28,7 +30,11 @@ export class CardsComponent {
   }));
   modalRef: BsModalRef<any> | undefined;
   filteredItems: any[] = this.items;
+  quantity4 = 0;
   selectedTag: string = 'all';
+  discountedProductId: any;
+  discountValue: any;
+  productDiscountComponent!: ProductDiscountComponent;
 
   filterCards(tag: string) {
     this.selectedTag = tag;
@@ -46,7 +52,8 @@ export class CardsComponent {
   constructor(
     private modalService: BsModalService,
     private cartService: CartService,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private sharedService: SharedService
   ) {}
 
   showSuccess(mensage: string, title: string) {
@@ -77,12 +84,17 @@ export class CardsComponent {
   addAllToCart() {
     for (const item of this.filteredItems) {
       if (item.quantity > 0) {
-        this.cartService.addToCart(item);
+        if (item.id !== this.sharedService.discountedProduct.id) {
+          this.cartService.addToCart(item, item.quantity);
+        } else {
+          this.cartService.addProductWithDiscountToCart(item, item.quantity);
+        }
         item.quantity = 0;
       }
     }
+
     this.selectedItems = 0;
-    this.showSuccess('Itens adicionados ao carrinho com sucesso!', 'Sucess!');
+    this.showSuccess('Itens adicionados ao carrinho com sucesso!', 'Sucesso!');
   }
 
   closeModal() {
@@ -110,10 +122,10 @@ export class CardsComponent {
     item.liked = !item.liked;
   }
 
-  increment(event: Event, item: any) {
+  increment(event: Event, item: any, quantity: number = 1) {
     event.stopPropagation();
-    item.quantity++;
-    this.selectedItems++;
+    item.quantity += quantity;
+    this.selectedItems = item.quantity;
   }
 
   decrement(event: Event, item: any) {

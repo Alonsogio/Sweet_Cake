@@ -1,0 +1,50 @@
+.sobre-nos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 272px;
+}
+
+.sobre-nos-text {
+    width: 418px;
+    font-size: 15px;
+    color: #696563;
+}
+
+h2 {
+    font-family: 'Great Vibes';
+    font-size: 28px;
+    color: var(--pink-secundary);
+}
+
+.sobre-nos-img {
+    width: 421px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-nos-img1 {
+    width: 300px;
+    height: 150px;
+    border-radius: 14px;
+}
+
+.sobre-nos-img2 {
+    width: 600px;
+    height: 150px;
+}
+
+.div-img {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+}

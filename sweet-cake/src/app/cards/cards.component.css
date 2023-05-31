@@ -176,6 +176,9 @@ h1 {
     justify-content: space-around;
     align-items: center;
     transition: background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
 }
 
 .body-cards {
@@ -194,6 +197,7 @@ h1 {
     background-color: #8080806e;
     color: white;
     transition: background-color 0.3s ease;
+    cursor: not-allowed;
 }
 
 .star-filled {
