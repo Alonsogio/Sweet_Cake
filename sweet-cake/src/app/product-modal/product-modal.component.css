@@ -1,0 +1,147 @@
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050;
+    overflow: auto;
+}
+
+.modal {
+    display: flex;
+    position: relative;
+    width: 22%;
+    max-width: 176px;
+    background-color: #fffbfb;
+    padding: 6px 24px 4px;
+    border-radius: 5px;
+    margin-top: 4vh;
+    justify-content: center;
+}
+
+.modal-description {
+    font-size: 7px;
+    color: var(--gray0);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.modal.blow.show {
+    animation: blowUpModal 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+img {
+    height: 20%;
+    width: 100%;
+}
+
+h4 {
+    color: var(--primary);
+    margin: 4px 0px;
+    font-size: 11px;
+}
+
+.modal-lermaisBtn {
+    background-color: transparent;
+    border: none;
+    font-size: 9px;
+    padding: 0px;
+    cursor: pointer;
+    color: var(--gray0);
+    transition: color 0.3s ease;
+    font-family: 'Roboto';
+    font-weight: 600;
+}
+
+.modal-lermaisBtn:hover {
+    color: var(--primary);
+}
+
+.price-modal {
+    font-size: 10px;
+    color: var(--primary);
+}
+
+.img-carouselitem {
+    height: 126px;
+    width: 213px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.carousel {
+    width: 213px;
+}
+
+.slick-arrow {
+    left: -41px;
+}
+
+.modal-info {
+    padding: 9px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.modal-button {
+    background-color: var(--primary);
+    border: none;
+    color: #fffbfb;
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.modal-button:hover {
+    background-color: transparent;
+    border: 1px solid var(--gray0);
+    color: var(--primary);
+}
+
+.close {
+    border: 1px solid var(--gray0);
+    padding: 6px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    color: var(--pink-secundary);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    background-color: var(--pink-secundary);
+    border: 1px solid var(--pink-secundary);
+    color: white;
+}
+
+@keyframes blowUpModal {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(2);
+    }
+}

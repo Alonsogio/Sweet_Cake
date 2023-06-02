@@ -1,0 +1,322 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 40px;
+    background-color: #2e1406;
+    border-bottom: 1px solid #dad0d0;
+}
+
+.search-input {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
+    margin-top: 30px;
+    top: 100%;
+    left: -216px;
+    animation: fadeoff 0.3s ease-in-out;
+    position: absolute;
+}
+
+.search-input.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s, transform 0.3s;
+    animation: fadeIn 0.3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    left: -216px;
+    z-index: 1;
+}
+
+.icon-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeoff {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+
+    }
+}
+
+
+.mat-toolbar.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    border-radius: 0px 0px 40px 40px
+}
+
+.search-icon {
+    color: #dad0d0;
+    cursor: pointer;
+}
+
+.search-icon:hover {
+    color: #fc6156;
+    transition: 0.3s ease;
+}
+
+.cart-icon {
+    cursor: pointer;
+    color: #dad0d0;
+}
+
+.cart-icon:hover {
+    color: #fc6156;
+    transition: 0.3s ease;
+}
+
+.cart-count {
+    background-color: #e87a72;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border-radius: 26px;
+    height: 19px;
+    width: 19px;
+    font-size: 13px;
+    align-items: center;
+    position: absolute;
+    bottom: 22px;
+    left: 31px;
+}
+
+.logo img {
+    margin-top: 11px;
+    width: 69px;
+    height: 51px;
+    margin-right: 100px;
+    object-fit: cover;
+}
+
+.header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.quantityandvalue {
+    font-size: 14px;
+    color: #58595a;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.fa-trash {
+    color: var(--gray0);
+}
+
+.fa-trash:hover {
+    color: var(--primary);
+}
+
+.buttontrash {
+    height: 25px;
+    background-color: transparent;
+    border: none;
+}
+
+.div-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 84%;
+    border-bottom: 1px solid var(--pink-secundary);
+}
+
+.total {
+    font-size: 12px;
+    color: #2e1406;
+    font-family: 'Montserrat';
+}
+
+.preço {
+    color: var(--pink-secundary);
+    font-size: 15px;
+}
+
+.sweetcar {
+    font-size: 12px;
+    color: #e87a72;
+    font-family: 'Montserrat';
+}
+
+.value {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+.product-tooltip {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    max-height: 200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+.cart-icon:hover .product-tooltip {
+    display: block;
+}
+
+
+.empty-cart-message {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.div-headerbutton {
+    border-left: 1px solid #b7b1b1;
+    width: 100px;
+    height: 56%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.header-buttonsNav {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header-buttonsNav button {
+    color: #dad0d0;
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+
+.header-buttonsNav button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--pink-secundary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header-buttonsNav button:hover::after {
+    transform: scaleX(1);
+}
+
+
+
+button span {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-item-image {
+    width: 101px;
+    height: 112px;
+    object-fit: cover;
+}
+
+.cart-li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cart-items {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-nameandtrash {
+    display: flex;
+    align-items: center;
+}
+
+.btn-cart {
+    display: flex;
+    border-radius: 6px;
+    border: none;
+    padding: 14px 0px;
+    width: 212px;
+    margin-bottom: 8px;
+    background-color: var(--primary);
+    color: white;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-cart:hover {
+    background-color: #ad3d3c;
+    transition: 0.3s ease;
+}
+
+.suggestions {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.suggestions p {
+    margin: 0;
+}
+
+.suggestions img {
+    width: 100px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardsearch {
+    display: flex;
+    align-items: center;
+    height: 84px;
+}
+
+.nameitemsearch {
+    font-size: 16px;
+    color: var(--pink-secundary);
+}
+
+.valuesearch {
+    font-size: 13px;
+    color: var(--gray0);
+}

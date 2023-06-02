@@ -1,0 +1,27 @@
+.container-discount {
+    width: 770px;
+    height: 54vh;
+    margin-top: 91px;
+    background-image: url(src\assets\img\bgdiscount.jpg);
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.background {
+    background-color: #ad3d3c;
+}
+
+img {
+    width: 45%;
+}
+
+h1 {
+    color: #e1d4cd;
+    font-size: 40px;
+    margin-left: 20px;
+}

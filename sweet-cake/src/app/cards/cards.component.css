@@ -1,0 +1,238 @@
+.card {
+    background-color: #f6f6f6;
+    display: flex;
+    width: 540px;
+    height: 180px;
+    border-radius: 94px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    bottom: 184px;
+    z-index: 1;
+    justify-content: flex-end;
+    flex-direction: row;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 5px 10px rgb(234 104 104 / 67%);
+    transition: box-shadow 0.3s, transform 0.3s;
+    transform: rotate(4deg);
+}
+
+.card-image {
+    position: relative;
+    width: 233px;
+    height: 227px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.card-image img {
+    position: absolute;
+    width: 100%;
+    height: 81%;
+    object-fit: cover;
+    transform: translate3d(0, -20px, -40px);
+    z-index: -1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card-image:hover img {
+    transform: scale(1.2);
+}
+
+.card-content {
+    padding: 20px;
+    display: flex;
+    width: 53%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container {
+    height: 236px;
+}
+
+h2 {
+    margin: 0;
+    font-size: 20px;
+    color: var(--primary);
+}
+
+.card-price {
+    margin: 0px;
+    color: var(--gray0);
+}
+
+.card-description {
+    margin: 0px;
+    font-size: 15px;
+    color: var(--gray0);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.counter {
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter button {
+    display: flex;
+    width: 35px;
+    padding: 2px;
+    border-radius: 7px;
+    font-size: 28px;
+    border: none;
+    background-color: var(--primary);
+    color: #f6f6f6;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter button:hover {
+    background-color: #ad3d3c;
+    transition: 0.3s ease;
+}
+
+.listCards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container-btn-filter {
+    margin: 30px 0px 98px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 95px;
+    gap: 11px;
+}
+
+h1 {
+    font-family: 'Great Vibes';
+    font-size: 49px;
+    color: #2e1406;
+}
+
+.div-btn-filter {
+    width: 48%;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.btn-filter {
+    padding: 10px 30px;
+    display: flex;
+    border-radius: 21px;
+    background-color: transparent;
+    border: 2px solid var(--gray0);
+    color: var(--pink-secundary);
+    font-weight: 600;
+    font-family: 'Montserrat';
+    transition: background-color 0.3s ease;
+    transition: border 0.3s ease;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-filter:hover {
+    background-color: var(--pink-secundary);
+    border: 2px solid var(--pink-secundary);
+    color: white;
+}
+
+.fade-in-animation {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade-in-animation.show {
+    opacity: 1;
+}
+
+.container.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-add {
+    display: flex;
+    border-radius: 36px;
+    border: none;
+    padding: 20px 0px;
+    width: 300px;
+    margin: 31px;
+    background-color: var(--primary);
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-add:hover:enabled {
+    background-color: #ad3d3c;
+    transition: 0.3s ease;
+}
+
+.body-cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.span-text {
+    margin-left: 65px;
+    font-size: 16px;
+}
+
+.disabled-button {
+    background-color: #8080806e;
+    color: white;
+    transition: background-color 0.3s ease;
+    cursor: not-allowed;
+}
+
+.star-filled {
+    color: var(--pink-secundary);
+}
+
+.star-icon {
+    color: rgba(217, 214, 214, 0.953);
+    font-size: 14px;
+}
+
+.like {
+    width: 10%;
+    color: var(--gray0);
+    background-color: transparent;
+    border: none;
+    padding: 3px 0px;
+    cursor: pointer;
+}
+
+button.liked {
+    color: #ff4646;
+    width: 10%;
+    background-color: transparent;
+    border: none;
+    padding: 3px 0px;
+}
