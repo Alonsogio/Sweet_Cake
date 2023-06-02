@@ -125,7 +125,10 @@ export class CardsComponent {
   increment(event: Event, item: any, quantity: number = 1) {
     event.stopPropagation();
     item.quantity += quantity;
-    this.selectedItems = item.quantity;
+    this.selectedItems = this.filteredItems.reduce(
+      (total, currentItem) => total + currentItem.quantity,
+      0
+    );
   }
 
   decrement(event: Event, item: any) {

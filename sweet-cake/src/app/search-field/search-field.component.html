@@ -1,0 +1,9 @@
+<div class="search-field" [ngClass]="{ 'slide-in': showSearchInputAnimation }">
+  <input
+    type="text"
+    [(ngModel)]="searchQuery"
+    (keyup)="onSearch()"
+    placeholder="Digite sua pesquisa"
+  />
+  <button (click)="onSearch()">Pesquisar</button>
+</div>

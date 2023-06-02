@@ -9,6 +9,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { ToastrModule } from 'ngx-toastr';
+import { FormsModule } from '@angular/forms';
 import 'slick-carousel/slick/slick';
 
 import { AppComponent } from './app.component';
@@ -22,6 +23,7 @@ import { ProductDiscountComponent } from './product-discount/product-discount.co
 
 import { CartService } from './cart/cart.service';
 import { FooterComponent } from './footer/footer.component';
+import { SearchFieldComponent } from './search-field/search-field.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { FooterComponent } from './footer/footer.component';
     SobreNosComponent,
     ProductDiscountComponent,
     FooterComponent,
+    SearchFieldComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { FooterComponent } from './footer/footer.component';
     SlickCarouselModule,
     ModalModule.forRoot(),
     ToastrModule.forRoot(),
+    FormsModule,
   ],
   providers: [ProductDiscountComponent],
   bootstrap: [AppComponent],

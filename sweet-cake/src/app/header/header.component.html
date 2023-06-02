@@ -1,32 +1,54 @@
 <mat-toolbar [ngClass]="{ fixed: isHeaderFixed }">
   <div class="header-buttonsNav">
-    <button>
+    <button (click)="scrollToTop()">
       <span>Home</span>
     </button>
-    <button>
+    <button (click)="scrollToBottom()">
       <span>Contact</span>
     </button>
-    <button>
+    <button (click)="scrollToBottom()">
       <span>About Us</span>
     </button>
   </div>
   <div class="logo">
     <img src="assets/img/logo.png" alt="logo" />
   </div>
-  <span class="spacer"></span>
-  <div class="div-headerbutton">
-    <div class="cart-icon" [matMenuTriggerFor]="cartMenu">
-      <div class="cart-count" *ngIf="cartItems.length > 0">
-        {{ cartItems.length }}
+  <div class="icon-container">
+    <div class="div-headerbutton">
+      <div class="cart-icon" [matMenuTriggerFor]="cartMenu">
+        <div class="cart-count" *ngIf="cartItems.length > 0">
+          {{ cartItems.length }}
+        </div>
+        <i
+          class="fas fa-cart-shopping"
+          matTooltip="Carrinho"
+          (click)="showProductTooltip()"
+        ></i>
       </div>
-      <i
-        class="fas fa-cart-shopping"
-        matTooltip="Carrinho"
-        (click)="showProductTooltip()"
-      ></i>
-    </div>
-    <div class="search-icon">
-      <i class="fas fa-magnifying-glass"></i>
+      <div
+        class="search-icon"
+        (click)="showSearchInput ? hideSearchInput() : (showSearchInput = true)"
+      >
+        <i class="fas fa-magnifying-glass" matTooltip="Pesquisar"></i>
+      </div>
+      <div *ngIf="showSearchInput" class="search-input active">
+        <app-search-field
+          (search)="performSearch($event)"
+          [(ngModel)]="searchText"
+        ></app-search-field>
+        <div class="suggestions" *ngFor="let result of searchResults">
+          <div *ngIf="result.id === -1">
+            <p>Nenhum resultado encontrado</p>
+          </div>
+          <div class="cardsearch" *ngIf="result.id !== -1">
+            <img [src]="result.img" alt="result.nameItem" />
+            <div class="namevaluesearch">
+              <p class="nameitemsearch">{{ result.nameItem }}</p>
+              <p class="valuesearch">R$ {{ result.value }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </mat-toolbar>
@@ -37,6 +59,15 @@
   </ng-container>
   <ng-template #cartItemsSection>
     <div class="cart-items">
+      <div class="div-total">
+        <div class="sweetcar">SweetCar</div>
+        <div>
+          <p>
+            <span class="total">total:</span>
+            <span class="preço">R${{ getTotalValue() }}</span>
+          </p>
+        </div>
+      </div>
       <button mat-menu-item *ngFor="let product of cartItems">
         <li class="cart-li">
           <img
@@ -45,15 +76,37 @@
             class="menu-item-image"
           />
           <div class="menu-item-details">
-            <p>{{ product?.nameItem }}</p>
-            <p>{{ product?.value }}</p>
-            <p>Qtd.: {{ product?.quantity }}</p>
+            <div class="div-nameandtrash">
+              <div>
+                <p>{{ product?.nameItem }}</p>
+              </div>
+              <div>
+                <button
+                  class="buttontrash"
+                  mat-icon-button
+                  (click)="removeFromCart(product)"
+                >
+                  <i class="fa-sharp fa-solid fa-trash"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="quantityandvalue">
+              <div>
+                <p>Qtd.: {{ product?.quantity }}</p>
+              </div>
+              <div>
+                <p class="value">R$ {{ product?.value }}</p>
+              </div>
+            </div>
           </div>
-          <button mat-icon-button (click)="removeFromCart(product)">
-            <i class="fa-sharp fa-solid fa-trash"></i>
-          </button>
         </li>
       </button>
+      <div class="cart-total">
+        <button class="btn-cart" mat-raised-button (click)="finalizePurchase()">
+          Finalizar Compra
+        </button>
+      </div>
     </div>
   </ng-template>
 </mat-menu>

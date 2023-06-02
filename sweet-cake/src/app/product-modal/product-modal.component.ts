@@ -18,7 +18,10 @@ export class ProductModalComponent {
     arrows: true,
   };
 
-  constructor(private cartService: CartService, private toastr: ToastrService) {}
+  constructor(
+    private cartService: CartService,
+    private toastr: ToastrService
+  ) {}
 
   showSuccess(mensage: string, title: string) {
     this.toastr.success(`${mensage}`, `${title}`, {

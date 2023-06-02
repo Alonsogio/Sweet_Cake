@@ -1,8 +1,9 @@
-.custom-section{
+.custom-section {
     width: 98vw;
     height: 73vh;
 }
-.custom-section img{
+
+.custom-section img {
     width: 100%;
     height: 100%;
     object-fit: cover;

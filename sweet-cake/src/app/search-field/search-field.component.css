@@ -1,0 +1,28 @@
+button {
+    color: white;
+    padding: 10px;
+    background-color: var(--pink-secundary);
+    border: none;
+    border-radius: 3px;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+
+input {
+    padding: 8px 31px;
+}
+
+
+.slide-in {
+    animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

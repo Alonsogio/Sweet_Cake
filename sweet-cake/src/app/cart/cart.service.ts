@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { CardsComponent } from '../cards/cards.component';
 
 @Injectable({
   providedIn: 'root',
@@ -10,7 +9,6 @@ export class CartService {
     []
   );
   public cartItems$ = this.cartItemsSubject.asObservable();
-  cards = CardsComponent;
 
   constructor() {}
 
@@ -27,12 +25,17 @@ export class CartService {
     const cartItems = this.getCartItems();
     const existingItem = cartItems.find((i) => i.id === item.id);
     if (existingItem) {
-      existingItem.quantity += quantity || 1; // Incrementa a quantidade corretamente
+      existingItem.quantity += quantity || 1;
     } else {
       const newItem = { ...item, quantity: quantity || 1 };
       cartItems.push(newItem);
     }
     this.cartItemsSubject.next([...cartItems]);
+  }
+
+  clearCart(): void {
+    const emptyCart: any[] = [];
+    this.cartItemsSubject.next(emptyCart);
   }
 
   removeFromCart(item: any) {
@@ -52,7 +55,7 @@ export class CartService {
   calculateDiscountedValue(product: any, discountValue: number): number {
     const discountedValue =
       product.value - product.value * (discountValue / 100);
-    return discountedValue; // Retorna o valor sem arredondar
+    return discountedValue;
   }
 
   addProductWithDiscountToCart(product: any, quantity: number = 1) {

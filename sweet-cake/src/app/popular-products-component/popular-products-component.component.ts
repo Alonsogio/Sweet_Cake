@@ -4,10 +4,9 @@ import { data } from '../../data/database';
 @Component({
   selector: 'app-popular-products-component',
   templateUrl: './popular-products-component.component.html',
-  styleUrls: ['./popular-products-component.component.css']
+  styleUrls: ['./popular-products-component.component.css'],
 })
 export class PopularProductsComponentComponent {
-
   popularProducts: any[] = [];
   activeIndex: number = 0;
 
@@ -16,7 +15,9 @@ export class PopularProductsComponentComponent {
   }
 
   previousProduct() {
-    this.activeIndex = (this.activeIndex - 1 + this.popularProducts.length) % this.popularProducts.length;
+    this.activeIndex =
+      (this.activeIndex - 1 + this.popularProducts.length) %
+      this.popularProducts.length;
   }
 
   nextProduct() {
@@ -30,5 +31,4 @@ export class PopularProductsComponentComponent {
     }
     return stars;
   }
-
 }

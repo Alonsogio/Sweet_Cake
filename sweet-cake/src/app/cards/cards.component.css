@@ -99,6 +99,11 @@ h2 {
     align-items: center;
 }
 
+.counter button:hover {
+    background-color: #ad3d3c;
+    transition: 0.3s ease;
+}
+
 .listCards {
     display: flex;
     flex-wrap: wrap;
@@ -179,6 +184,12 @@ h1 {
     cursor: pointer;
     z-index: 9;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+}
+
+.btn-add:hover:enabled {
+    background-color: #ad3d3c;
+    transition: 0.3s ease;
 }
 
 .body-cards {
@@ -210,7 +221,8 @@ h1 {
 }
 
 .like {
-    width: 15%;
+    width: 10%;
+    color: var(--gray0);
     background-color: transparent;
     border: none;
     padding: 3px 0px;
@@ -218,8 +230,8 @@ h1 {
 }
 
 button.liked {
-    color: red;
-    width: 15%;
+    color: #ff4646;
+    width: 10%;
     background-color: transparent;
     border: none;
     padding: 3px 0px;

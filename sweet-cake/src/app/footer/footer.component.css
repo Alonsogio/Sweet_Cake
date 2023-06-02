@@ -19,25 +19,26 @@ footer {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 13px;
     margin: 20px 0;
-    color: #474242;
+    color: #8f7c82;
 }
 
 h2 {
-    color: #474242;
+    color: #a09c9b;
     font-size: 13px;
+    font-weight: 200;
 }
 
 .fab {
-    color: var(--primary);
+    color: #ad3d3c;
     font-size: 20px;
 }
 
 .enter-button {
     padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    background-color: #ad3d3c;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -45,6 +46,10 @@ h2 {
 
 p {
     font-size: 12px;
-    color: var(--primary);
+    color: #b9b6b5;
     margin-top: 20px;
+}
+
+img {
+    width: 59px;
 }

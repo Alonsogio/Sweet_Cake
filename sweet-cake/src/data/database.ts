@@ -61,7 +61,8 @@ export const data = [
     img3: 'assets/img/mg2.jpg',
     img4: 'assets/img/mg3.jpg',
     nameItem: 'Cupcakes Morango',
-    description: 'Cupcakes de morango extremamente úmidos são cobert...',
+    description:
+      'O cupcake de morango é uma deliciosa sobremesa que combina a fofura e a umidade de um bolo com o sabor doce e refrescante dos morangos. É feito com uma massa macia e suave, geralmente aromatizada com baunilha, e recheado com um creme de morango cremoso. Na cobertura, é comum encontrar um delicioso buttercream de morango ou um ganache de chocolate branco com pedaços de morango. Decorado com um morango fresco ou polvilhado com migalhas de biscoito, o cupcake de morango é uma tentação irresistível para os amantes de doces, oferecendo uma explosão de sabores frutados e uma experiência indulgente para os paladares. É perfeito para comemorar ocasiões especiais, festas ou simplesmente para saborear um doce prazeroso a qualquer momento.',
     value: 55.0,
     tag: 'Cupcakes',
     likes: 0,
@@ -74,7 +75,7 @@ export const data = [
     img4: 'assets/img/bn3.jpg',
     nameItem: 'Cupcakes Banana',
     description:
-      'Estes deliciosos cupcakes de pudim de banana caseiro rechea...',
+      'O cupcake de banana é uma delícia reconfortante que combina a suavidade e o sabor doce da banana madura com a textura macia e úmida de um bolo. Feito com uma massa aromática de banana, geralmente enriquecida com especiarias como canela e noz-moscada, o cupcake de banana é uma verdadeira explosão de sabores. Ele pode ser acompanhado por um delicioso recheio de banana cremoso e é frequentemente coberto com um irresistível cream cheese frosting ou uma ganache de chocolate. Com seu aroma delicioso e seu sabor reconfortante, o cupcake de banana é uma escolha perfeita para os amantes de sobremesas que desejam saborear algo aconchegante e cheio de sabor. É uma opção tentadora para desfrutar em lanches da tarde, festas ou como um mimo doce a qualquer momento.',
     value: 45.9,
     tag: 'Cupcakes',
     likes: 0,
@@ -86,7 +87,8 @@ export const data = [
     img3: 'assets/img/m2.png',
     img4: 'assets/img/m3.png',
     nameItem: 'Macarons de Manga',
-    description: 'Macarons com ganache cremosa de manga e...',
+    description:
+      'O macaron de manga é uma pequena joia da confeitaria que combina a delicadeza de um biscoito crocante por fora com um recheio suave e cremoso de manga. Essa iguaria francesa encanta os amantes de doces com sua aparência colorida e elegante. O biscoito de amêndoa, leve e aerado, oferece uma textura única que contrasta perfeitamente com o creme de manga, que traz um sabor tropical e refrescante. Cada mordida é uma explosão de sabores tropicais, com notas doces e suculentas da manga combinadas com a sutileza das amêndoas. O macaron de manga é uma opção perfeita para quem busca uma sobremesa sofisticada e exótica, capaz de agradar tanto o paladar quanto os olhos. É uma verdadeira obra-prima da confeitaria que proporciona uma experiência irresistível e memorável para os amantes de doces.',
     value: 35.9,
     tag: 'Macarons',
     likes: 0,
@@ -94,9 +96,12 @@ export const data = [
   {
     id: 8,
     img: 'assets/img/cerise.png',
+    img2: 'assets/img/cr1.jpg',
+    img3: 'assets/img/cr2.jpg',
+    img4: 'assets/img/cr3.jpg',
     nameItem: 'Macarons de Cereja',
     description:
-      'Delicioso macaron com uma incrivel ganache cintilante de cereja...',
+      'O macaron de cereja é uma deliciosa iguaria francesa que combina a leveza e crocância do biscoito de amêndoa com um recheio suave e aromático de cereja. Com sua aparência encantadora e cores vibrantes, o macaron de cereja atrai os amantes de doces com sua combinação única de sabores. O biscoito de amêndoa cria uma base perfeita para ressaltar o sabor do recheio de cereja, que é doce, frutado e levemente ácido. Cada mordida é uma experiência gustativa equilibrada, com a textura delicada do biscoito contrastando com a explosão de sabor da cereja. O macaron de cereja é uma opção irresistível para aqueles que desejam apreciar uma sobremesa refinada e cheia de sabores intensos. É uma verdadeira tentação para os amantes de doces que buscam uma combinação elegante e prazerosa de sabores.',
     value: 25.8,
     tag: 'Macarons',
     likes: 0,
@@ -104,9 +109,12 @@ export const data = [
   {
     id: 9,
     img: 'assets/img/coffee.png',
+    img2: 'assets/img/cf1.jpg',
+    img3: 'assets/img/cf2.jpg',
+    img4: 'assets/img/cf3.jpg',
     nameItem: 'Macarons de Café',
     description:
-      'Estes macarons têm uma casca de macaron francês de sabor de café...',
+      'O macaron de café é uma delícia para os amantes da bebida aromática e intensa. Com uma combinação perfeita entre a crocância do biscoito de amêndoa e o sabor marcante do café, esse pequeno doce encanta os paladares mais exigentes. Cada mordida revela uma textura delicada e um equilíbrio perfeito entre o sabor do café e a suavidade do recheio. O aroma envolvente do café permeia todo o macaron, despertando os sentidos e proporcionando uma experiência única. Seja como acompanhamento para uma xícara de café ou como um deleite independente, o macaron de café é uma verdadeira indulgência para os amantes dessa bebida tão amada. Sua sofisticação e sabor inconfundível fazem dele uma opção irresistível para os apreciadores de doces e café.',
     value: 40.0,
     tag: 'Macarons',
     likes: 0,

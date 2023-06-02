@@ -40,7 +40,7 @@
             (click)="incrementLikes($event, item); $event.stopPropagation()"
             [ngClass]="{ liked: item.liked }"
           >
-            <i class="far fa-heart"></i> {{ item.likes }}
+            <i class="fa-solid fa-heart"></i> {{ item.likes }}
           </button>
           <p class="card-price">R$ {{ item.value.toFixed(2) }}</p>
           <div class="counter">
