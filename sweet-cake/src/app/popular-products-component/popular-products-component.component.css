@@ -193,11 +193,6 @@ h1 {
   .wave-container2 {
     bottom: -99%;
   }
-
-  .product img {
-    width: 178px;
-    height: 167px;
-  }
 }
 
 @media screen and (max-width: 1092px) {

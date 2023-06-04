@@ -215,6 +215,10 @@
   cursor: pointer;
 }
 
+.header-buttonsNav button {
+  position: relative;
+}
+
 .header-buttonsNav button::after {
   content: '';
   position: absolute;
@@ -230,6 +234,7 @@
 .header-buttonsNav button:hover::after {
   transform: scaleX(1);
 }
+
 
 button span {
   font-family: 'Montserrat', sans-serif;
