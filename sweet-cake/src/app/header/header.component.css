@@ -1,9 +1,16 @@
 .mat-toolbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0px 40px;
     background-color: #2e1406;
     border-bottom: 1px solid #dad0d0;
+}
+
+.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .search-input {
@@ -69,8 +76,9 @@
 }
 
 .search-icon {
-    color: #dad0d0;
     cursor: pointer;
+    color: #dad0d0;
+    font-size: 18px;
 }
 
 .search-icon:hover {
@@ -81,6 +89,7 @@
 .cart-icon {
     cursor: pointer;
     color: #dad0d0;
+    font-size: 18px;
 }
 
 .cart-icon:hover {
@@ -104,10 +113,8 @@
 }
 
 .logo img {
-    margin-top: 11px;
-    width: 69px;
-    height: 51px;
-    margin-right: 100px;
+    width: 66px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -218,9 +225,9 @@
     background-color: transparent;
     border: none;
     font-size: 14px;
-    position: relative;
     cursor: pointer;
 }
+
 
 .header-buttonsNav button::after {
     content: '';
@@ -319,4 +326,47 @@ button span {
 .valuesearch {
     font-size: 13px;
     color: var(--gray0);
+}
+
+@media (max-width: 519px) {
+    .mat-toolbar {
+        padding: 0px 18px;
+    }
+
+    .header-buttonsNav button {
+        font-size: 10px;
+    }
+
+    .header-buttonsNav {
+        gap: 6px;
+    }
+
+    .logo {
+        padding: 0px 14px;
+    }
+
+    .logo img {
+        width: 47px;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .div-headerbutton {
+        width: 76px;
+    }
+
+    .cart-icon {
+        font-size: 15px;
+    }
+
+    .search-icon {
+        font-size: 15px;
+    }
+    .cart-count {
+        height: 17px;
+        width: 17px;
+        font-size: 13px;
+        bottom: 18px;
+        left: 25px;
+    }
 }

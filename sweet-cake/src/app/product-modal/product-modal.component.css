@@ -25,7 +25,7 @@
 }
 
 .modal-description {
-    font-size: 7px;
+    font-size: 10px;
     color: var(--gray0);
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -143,5 +143,48 @@ h4 {
 
     100% {
         transform: scale(2);
+    }
+}
+
+@media (max-width: 519px) {
+    .carousel {
+        width: 129px;
+    }
+
+    .img-carouselitem {
+        height: 93px;
+        width: 129px;
+    }
+
+    .modal {
+        padding: 5px 29px 4px;
+        margin-top: 1vh;
+    }
+
+    .modal-button {
+        padding: 3px 5px;
+        width: 57px;
+        font-size: 7px;
+    }
+
+    .close {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    h4 {
+        font-size: 9px;
+    }
+
+    .modal-description {
+        font-size: 6px;
+    }
+
+    .modal-lermaisBtn {
+        font-size: 7px;
+    }
+
+    .price-modal {
+        font-size: 8px;
     }
 }

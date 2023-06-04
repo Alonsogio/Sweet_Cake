@@ -236,3 +236,50 @@ button.liked {
     border: none;
     padding: 3px 0px;
 }
+
+@media screen and (max-width: 519px) {
+    .container-btn-filter {
+        margin: 30px 0px 64px;
+        height: 86px;
+    }
+
+    h1 {
+        font-size: 31px;
+    }
+
+    .div-btn-filter {
+        gap: 12px;
+    }
+
+    .btn-filter {
+        padding: 6px 8px;
+    }
+
+    .listCards {
+        overflow: auto;
+        width: 90vw;
+        height: 38vh;
+        gap: 47px;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+
+    .card {
+        width: 484px;
+        height: 177px;
+        bottom: 184px;
+    }
+
+    .card-content {
+        width: 56%;
+    }
+
+    .card-image {
+        width: 209px;
+        height: 224px;
+    }
+
+    .card-image img {
+        height: 81%;
+    }
+}

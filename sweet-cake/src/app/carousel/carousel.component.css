@@ -4,6 +4,7 @@
     object-fit: cover;
 }
 
+
 .slide {
     position: relative;
 }
@@ -24,19 +25,34 @@
     left: 28%;
     transform: translate(-50%, -50%);
     font-family: 'Great Vibes', cursive;
-    font-size: 57px;
+    font-size: 5vw;
     z-index: 2;
     color: var(--pink-secundary);
 }
 
 .image-text2 {
-    width: 426px;
+    width: 46%;
     position: absolute;
-    top: 49%;
-    left: 30%;
+    top: 48%;
+    left: 32%;
     transform: translate(-50%, -50%);
     color: #d1c5c5;
     font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
+    font-size: 1.5vw;
     z-index: 2;
+}
+
+@media (max-width: 519px) {
+    .slide img {
+        height: 283px;
+    }
+
+    .image-text {
+        font-size: 6vw;
+    }
+
+    .image-text2 {
+        width: 49%;
+        font-size: 2.5vw;
+    }
 }

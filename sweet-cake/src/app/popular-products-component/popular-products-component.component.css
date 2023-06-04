@@ -10,22 +10,35 @@
   align-items: center;
 }
 
+.cardspopular {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  gap: 50px;
+}
+
+.popular-info {
+  width: 29%;
+}
+
 .wave-container {
   position: absolute;
-  bottom: 267px;
+  bottom: 99%;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -1;
 }
 
 .wave-container2 {
   position: absolute;
-  bottom: -230px;
+  bottom: -99%;
   left: 0px;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  z-index: -1;
 }
 
 .wave {
@@ -79,8 +92,8 @@
 }
 
 .product img {
-  width: 231px;
-  height: 196px;
+  width: 214px;
+  height: 182px;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 10px;
@@ -125,5 +138,111 @@ h1 {
 
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 840px) {
+
+  .popular-products {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 67px;
+    gap: 9px;
+  }
+
+  .popular-info {
+    width: 100%;
+  }
+
+  .product img {
+    width: 200px;
+    height: 166px;
+  }
+
+  .cardspopular {
+    display: flex;
+    height: 410px;
+    width: 100%;
+    gap: 34px;
+    padding: 20px;
+    overflow: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .cardspopular::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+
+  .cardspopular::-webkit-scrollbar-track {
+    background: #2e1406;
+  }
+
+  .cardspopular::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 11px;
+  }
+
+  .cardspopular::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .wave-container2 {
+    bottom: -99%;
+  }
+
+  .product img {
+    width: 178px;
+    height: 167px;
+  }
+}
+
+@media screen and (max-width: 1092px) {
+  .cardspopular {
+    display: flex;
+    height: 342px;
+    width: 100%;
+    gap: 34px;
+    padding: 20px;
+    overflow: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .wave-container2 {
+    bottom: -43%;
+  }
+
+  .cardspopular::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+  }
+
+  .cardspopular::-webkit-scrollbar-track {
+    background: #2e1406;
+  }
+
+  .cardspopular::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 11px;
+  }
+
+  .cardspopular::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wave-container2 {
+    bottom: -26%;
+  }
+}
+
+@media screen and (max-width: 566px) {
+  .wave-container2 {
+    bottom: -17%;
   }
 }
